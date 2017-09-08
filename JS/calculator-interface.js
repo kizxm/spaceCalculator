@@ -1,4 +1,4 @@
-import {calculatorLogic} from './../JS/calculator.js'
+import {calculatorLogic} from './../JS/calculator.js';
 
 $(document).ready(function() {
   $("#calculateAge").submit(function(event){
