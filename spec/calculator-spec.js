@@ -28,7 +28,7 @@ describe('calculatorLogic', function() {
   it ('should test conversion of age to Jupiter', function() {
     let calculateAge = new calculatorLogic(new Date("1994-10-29"), new Date("2017-09-08"))
     let seconds = calculateAge.secondsConversion(calculateAge.birthDay, calculateAge.toDay)
-    expect(calculateAge.jupiterConversion(seconds)).toEqual(12.17)
+    expect(calculateAge.jupiterConversion(seconds)).toEqual(1.93)
   });
 
 });
