@@ -13,6 +13,10 @@ describe('calculatorLogic', function() {
     expect(calculateAge.mercuryConversion(seconds)).toEqual(95.32)
   });
 
-
+  it ('should test conversion of age to Venus', function() {
+    let calculateAge = new calculatorLogic(new Date("1994-10-29"), new Date("2017-09-08"))
+    let seconds = calculateAge.secondsConversion(calculateAge.birthDay, calculateAge.toDay)
+    expect(calculateAge.venusConversion(seconds)).toEqual(95.32)
+  });
 
 });
