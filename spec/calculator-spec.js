@@ -18,5 +18,10 @@ describe('calculatorLogic', function() {
     let seconds = calculateAge.secondsConversion(calculateAge.birthDay, calculateAge.toDay)
     expect(calculateAge.venusConversion(seconds)).toEqual(36.9)
   });
+  it ('should test conversion of age to Mars', function() {
+    let calculateAge = new calculatorLogic(new Date("1994-10-29"), new Date("2017-09-08"))
+    let seconds = calculateAge.secondsConversion(calculateAge.birthDay, calculateAge.toDay)
+    expect(calculateAge.marsConversion(seconds)).toEqual(36.9)
+  });
 
 });
