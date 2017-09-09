@@ -13,31 +13,29 @@ secondsConversion(birthDay, toDay) {
   let total = Math.floor(between / 1000);
   return total;
 }
-
-mercuryConversion(total){
+mercuryConversion(total) {
   const earthSeconds = 31536000;
   let ageFill = total / (easrthSeconds * .24);
   let age = parseFloat(ageFill.toFixed(2));
   return age;
 }
-venusConversion(total){
+venusConversion(total) {
   const earthSeconds = 31536000;
   let ageFill = total / (easrthSeconds * .62);
   let age = parseFloat(ageFill.toFixed(2));
   return age;
 }
-marsConversion(total){
+marsConversion(total) {
   const earthSeconds = 31536000;
   let ageFill = total / (easrthSeconds * 1.88);
   let age = parseFloat(ageFill.toFixed(2));
   return age;
 }
-jupiterConversion(total){
+jupiterConversion(total) {
   const earthSeconds = 31536000;
   let ageFill = total / (easrthSeconds * 11.86);
   let age = parseFloat(ageFill.toFixed(2));
   return age;
 }
-
 
 }
