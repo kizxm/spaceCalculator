@@ -15,17 +15,41 @@ var calculatorLogic = exports.calculatorLogic = function () {
 
     this.birthDay = birthDay;
     this.toDay = toDay;
+    this.life = 0;
   }
 
   _createClass(calculatorLogic, [{
     key: "secondsConversion",
-    value: function secondsConversion(birthDay, toDay) {
-      var toDayTime = toDay.getTime();
-      var birthDayTime = birthDay.getTime();
-      var between = toDayTime - birthDayTime;
-      var total = Math.floor(between / 1000);
+    value: function secondsConversion(birthDay) {
+      var number = 31536000;
+      var total = birthDay * number;
       return total;
     }
+    // mercuryConversion(total) {
+    //   const earthSeconds = 31536000;
+    //   let ageFill = total / (easrthSeconds * .24);
+    //   let age = parseFloat(ageFill.toFixed(2));
+    //   return age;
+    // }
+    // venusConversion(total) {
+    //   const earthSeconds = 31536000;
+    //   let ageFill = total / (easrthSeconds * .62);
+    //   let age = parseFloat(ageFill.toFixed(2));
+    //   return age;
+    // }
+    // marsConversion(total) {
+    //   const earthSeconds = 31536000;
+    //   let ageFill = total / (easrthSeconds * 1.88);
+    //   let age = parseFloat(ageFill.toFixed(2));
+    //   return age;
+    // }
+    // jupiterConversion(total) {
+    //   const earthSeconds = 31536000;
+    //   let ageFill = total / (easrthSeconds * 11.86);
+    //   let age = parseFloat(ageFill.toFixed(2));
+    //   return age;
+    // }
+
   }]);
 
   return calculatorLogic;
@@ -34,23 +58,21 @@ var calculatorLogic = exports.calculatorLogic = function () {
 },{}],2:[function(require,module,exports){
 "use strict";
 
-var _calculator = require("./../JS/calculator.js");
+var _calculator = require("./../js/calculator.js");
 
-$(document).ready(function () {
-    $("#calculateAge").submit(function (event) {
-        event.preventDefault();
+$(function () {
+  $("#calculateAge").submit(function (event) {
+    event.preventDefault();
+    var birthDay = $("#birthDay").val();
+    // let toDay = new Date();
+    // let gender = $("input#gender").val();
+    // let region = $("input#region").val();
+    var age = new _calculator.calculatorLogic(birthDay, toDay);
+    var totalEarthTime = age.secondsConversion();
 
-        var birthDay = new Date($("input#birthDay").val());
-        console.log($("input#birthDay").val());
-        var today = new Date();
-        // let gender = $("input#gender").val();
-        // let region = $("input#region").val();
-        var age = new Age(birthDay, toDay);
-        var totalEarthTime = age.secondsConversion(age.birthDay, age.toDay);
-
-        $("#birthDay").text(birthDay);
-        $("#toDay").text(toDay);
-    });
+    $("#birthDay").text(total);
+    $("#toDay").text(toDay);
+  });
 });
 
-},{"./../JS/calculator.js":1}]},{},[2]);
+},{"./../js/calculator.js":1}]},{},[2]);
