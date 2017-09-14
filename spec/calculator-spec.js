@@ -1,5 +1,5 @@
 import {calculatorLogic} from './../JS/calculator.js';
-
+/// ✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦ ///
 describe('calculatorLogic', function() {
 
   it ('should test conversion of age into seconds', function() {

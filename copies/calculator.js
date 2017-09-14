@@ -11,7 +11,6 @@ export class calculatorLogic {
     this.region = region;
     this.gender = gender;
   }
-  /// ✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦✦ ///
 
   secondsConversion() {
       let toDayTime = this.toDay.getTime();
@@ -50,6 +49,8 @@ export class calculatorLogic {
     return mercuryDeath;
   }
 
+//why won't it go through this loop?
+
   regionOut() {
     let regionAge = 0;
     age = number(document.getElementById("age").value);
@@ -86,4 +87,11 @@ export class calculatorLogic {
     } return regionAge;
 
   }
+
+  // death(region, gender)
+// secondsConversion(birthDay) {
+//   const number = 31536000;
+//   let total = birthDay * number;
+//   return total;
+// }
 }
